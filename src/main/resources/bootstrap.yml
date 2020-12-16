@@ -1,0 +1,18 @@
+server: 
+  port: 9100
+  
+spring:  application:
+    name: CallDetailsMS
+  cloud:
+    consul:
+      discovery: 
+        hostname: localhost
+      config:
+        enabled: true
+        prefix: config
+        default-context: application
+        data-key: data
+        profile-separator: '::'
+        format: YAML 
+        watch:
+          delay: 100
